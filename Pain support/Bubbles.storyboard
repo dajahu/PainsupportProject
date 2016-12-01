@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="TLK-TF-jkI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Symptons-->
+        <scene sceneID="93U-zt-tEC">
+            <objects>
+                <viewController title="Symptons" id="TLK-TF-jkI" customClass="PSSymptomViewController" customModule="Pain_support" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v5t-NH-B8t"/>
+                        <viewControllerLayoutGuide type="bottom" id="bnU-7n-7Dp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BRb-c8-NPB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_2" translatesAutoresizingMaskIntoConstraints="NO" id="urT-tL-W3Q">
+                                <rect key="frame" x="0.0" y="64" width="768" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="urT-tL-W3Q" secondAttribute="height" multiplier="768:61" constant="-50.36065573770486" id="csg-fd-AEw"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ck-Jy-3q9">
+                                <rect key="frame" x="0.0" y="951" width="768" height="73"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd9-gK-I62">
+                                        <rect key="frame" x="599" y="17" width="152" height="39"/>
+                                        <color key="backgroundColor" red="0.9758251308" green="1" blue="0.99101902710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Sd9-gK-I62" secondAttribute="height" multiplier="152:39" id="kEk-s8-ndN"/>
+                                        </constraints>
+                                        <state key="normal" title="Next" image="Next"/>
+                                        <connections>
+                                            <segue destination="Tlj-qd-KII" kind="push" id="3vl-Ba-6RS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9t-TR-Ydp">
+                                        <rect key="frame" x="17" y="17" width="152" height="39"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="R9t-TR-Ydp" secondAttribute="height" multiplier="152:39" id="5ma-tY-MV2"/>
+                                        </constraints>
+                                        <state key="normal" title="Previous" image="Previous"/>
+                                        <connections>
+                                            <action selector="previousPressed:" destination="TLK-TF-jkI" eventType="touchUpInside" id="NZA-Iu-AOk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.73725490199999999" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="R9t-TR-Ydp" secondAttribute="bottom" constant="17" id="PzH-qv-rsf"/>
+                                    <constraint firstAttribute="width" secondItem="0ck-Jy-3q9" secondAttribute="height" multiplier="768:73" id="YB3-Gw-jk9"/>
+                                    <constraint firstItem="R9t-TR-Ydp" firstAttribute="top" secondItem="0ck-Jy-3q9" secondAttribute="top" constant="17" id="YUB-u4-ZAa"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sd9-gK-I62" secondAttribute="bottom" constant="17" id="bBK-An-fIO"/>
+                                    <constraint firstItem="R9t-TR-Ydp" firstAttribute="leading" secondItem="0ck-Jy-3q9" secondAttribute="leading" constant="17" id="dK0-lz-yQ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sd9-gK-I62" secondAttribute="trailing" constant="17" id="qe3-5o-w3U"/>
+                                    <constraint firstItem="Sd9-gK-I62" firstAttribute="top" secondItem="0ck-Jy-3q9" secondAttribute="top" constant="17" id="tfv-hz-fjr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E95-ma-5XB" customClass="UIButtonTouched" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="281" y="209" width="207" height="208"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Numb"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enabledState" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9A-fd-GJX" customClass="UIButtonTouched" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="80" y="337" width="207" height="208"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Pain"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMU-ny-TPy" customClass="UIButtonTouched" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="480" y="337" width="207" height="208"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Swelling"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAZ-UG-5TQ" customClass="UIButtonTouched" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="281" y="448" width="207" height="208"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Weak"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKu-rb-PuZ" customClass="UIButtonTouched" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="80" y="565" width="207" height="208"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Rasch"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2r-0V-0KZ" customClass="UIButtonTouched" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="281" y="689" width="207" height="208"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Heat"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6g-Fh-1TH" customClass="UIButtonTouched" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="480" y="565" width="207" height="208"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelName" value="Cramps"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your symptoms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yR-Tl-ASF">
+                                <rect key="frame" x="250" y="160" width="269" height="21"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="urT-tL-W3Q" firstAttribute="top" secondItem="v5t-NH-B8t" secondAttribute="bottom" id="DBF-fx-iMN"/>
+                            <constraint firstItem="urT-tL-W3Q" firstAttribute="leading" secondItem="BRb-c8-NPB" secondAttribute="leadingMargin" constant="-20" id="DDR-vt-6La"/>
+                            <constraint firstItem="0ck-Jy-3q9" firstAttribute="leading" secondItem="BRb-c8-NPB" secondAttribute="leadingMargin" constant="-20" id="Qya-mV-ylz"/>
+                            <constraint firstItem="bnU-7n-7Dp" firstAttribute="top" secondItem="0ck-Jy-3q9" secondAttribute="bottom" id="RMi-3t-Ey4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0ck-Jy-3q9" secondAttribute="trailing" constant="-20" id="U7d-f6-bWB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="urT-tL-W3Q" secondAttribute="trailing" constant="-20" id="j2R-sV-mqY"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="btnS1" destination="E95-ma-5XB" id="FNx-tk-r8q"/>
+                        <outlet property="btnS2" destination="j9A-fd-GJX" id="lEb-Fe-Wgm"/>
+                        <outlet property="btnS3" destination="VMU-ny-TPy" id="AeH-aD-ptB"/>
+                        <outlet property="btnS4" destination="hAZ-UG-5TQ" id="vY1-SC-iUm"/>
+                        <outlet property="btnS5" destination="eKu-rb-PuZ" id="XnF-Id-cHD"/>
+                        <outlet property="btnS6" destination="a2r-0V-0KZ" id="1N8-og-AaM"/>
+                        <outlet property="btnS7" destination="u6g-Fh-1TH" id="DpN-Sd-AoN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kv1-j9-8AV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="588"/>
+        </scene>
+        <!--Charachter-->
+        <scene sceneID="c1X-7q-1zb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Charachter" id="Tlj-qd-KII" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6J7-Rx-i7O"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8Z-Uz-oT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2030" y="667"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Next" width="405" height="104"/>
+        <image name="Previous" width="405" height="104"/>
+        <image name="progressbar_2" width="2048" height="173"/>
+    </resources>
+</document>

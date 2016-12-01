@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="z6L-FY-xqn">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Factors-->
+        <scene sceneID="SHa-YD-HuE">
+            <objects>
+                <viewController title="Factors" id="z6L-FY-xqn" customClass="PSFactorsViewController" customModule="Pain_support" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WUW-le-zfg"/>
+                        <viewControllerLayoutGuide type="bottom" id="dpq-kp-lDI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w6j-wE-tXY">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_5" translatesAutoresizingMaskIntoConstraints="NO" id="h3O-HU-5Z8">
+                                <rect key="frame" x="0.0" y="64" width="768" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h3O-HU-5Z8" secondAttribute="height" multiplier="768:65" id="1kX-BA-2lG"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pq0-HE-RC6">
+                                <rect key="frame" x="0.0" y="951" width="768" height="73"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fA-4C-keP">
+                                        <rect key="frame" x="599" y="17" width="152" height="39"/>
+                                        <color key="backgroundColor" red="0.9758251308" green="1" blue="0.99101902710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5fA-4C-keP" secondAttribute="height" multiplier="152:39" id="dgS-4N-Dvl"/>
+                                        </constraints>
+                                        <state key="normal" title="Next" image="Next"/>
+                                        <connections>
+                                            <segue destination="Q2u-M3-cy7" kind="push" id="Xi2-YD-Ifw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OE-mo-WzP">
+                                        <rect key="frame" x="17" y="17" width="152" height="39"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0OE-mo-WzP" secondAttribute="height" multiplier="152:39" id="bFQ-Ui-uAQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Previous" image="Previous"/>
+                                        <connections>
+                                            <action selector="previousPressed:" destination="z6L-FY-xqn" eventType="touchUpInside" id="ZEp-hN-TmR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.73725490199999999" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0OE-mo-WzP" firstAttribute="leading" secondItem="pq0-HE-RC6" secondAttribute="leading" constant="17" id="Dvs-lE-1kC"/>
+                                    <constraint firstAttribute="width" secondItem="pq0-HE-RC6" secondAttribute="height" multiplier="768:73" id="L9e-PM-TpM"/>
+                                    <constraint firstAttribute="trailing" secondItem="5fA-4C-keP" secondAttribute="trailing" constant="17" id="W1w-G5-c2I"/>
+                                    <constraint firstItem="0OE-mo-WzP" firstAttribute="top" secondItem="pq0-HE-RC6" secondAttribute="top" constant="17" id="a6h-1v-qeU"/>
+                                    <constraint firstAttribute="bottom" secondItem="0OE-mo-WzP" secondAttribute="bottom" constant="17" id="hM9-cc-tCP"/>
+                                    <constraint firstItem="5fA-4C-keP" firstAttribute="top" secondItem="pq0-HE-RC6" secondAttribute="top" constant="17" id="jwj-Q8-9hf"/>
+                                    <constraint firstAttribute="bottom" secondItem="5fA-4C-keP" secondAttribute="bottom" constant="17" id="z55-Uu-mcH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-My-tQi" customClass="GradientSlider" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="20" y="519" width="728" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasRainbow" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="minimumValueImage" value="factor_eating"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="eatingValueChange:" destination="z6L-FY-xqn" eventType="valueChanged" id="9Bn-SF-W0w"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="How is your discomfort during a typical day?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuJ-jL-Aka">
+                                <rect key="frame" x="157" y="185" width="459" height="21"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56z-jL-WZn" customClass="GradientSlider" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="20" y="577" width="728" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasRainbow" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="minimumValueImage" value="factor_exertion"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="exertionValueChange:" destination="z6L-FY-xqn" eventType="valueChanged" id="i2d-41-hyw"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="What makes your discomfort  better or worse?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRg-Xa-8Je">
+                                <rect key="frame" x="152" y="465" width="464" height="21"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ky-Ib-DWd" customClass="GradientSlider" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="20" y="341" width="728" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasRainbow" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="minimumValueImage" value="factor_night"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nightValueChange:" destination="z6L-FY-xqn" eventType="valueChanged" id="YOi-VT-QvD"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9B-cS-Ye1" customClass="GradientSlider" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="20" y="263" width="728" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasRainbow" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="minimumValueImage" value="factor_day"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dayValueChange:" destination="z6L-FY-xqn" eventType="valueChanged" id="VnX-9X-Lpv"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Drag do describe better or worse?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-R9-iPJ">
+                                <rect key="frame" x="206" y="494" width="359" height="21"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apz-z3-x8e" customClass="GradientSlider" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="22" y="751" width="728" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasRainbow" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="minimumValueImage" value="factor_resting"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="restingValueChange:" destination="z6L-FY-xqn" eventType="valueChanged" id="7TA-nP-tOB"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-dM-ecr" customClass="GradientSlider" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="22" y="693" width="728" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasRainbow" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="minimumValueImage" value="factor_stress"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stressValueChange:" destination="z6L-FY-xqn" eventType="valueChanged" id="1qV-RO-EAQ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cG0-kh-fL7" customClass="GradientSlider" customModule="Pain_support" customModuleProvider="target">
+                                <rect key="frame" x="20" y="635" width="728" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="minColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="maxColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasRainbow" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="minimumValueImage" value="factor_moving"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="movingValueChange:" destination="z6L-FY-xqn" eventType="valueChanged" id="bTc-42-h1v"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Drag do describe to better or worse?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvV-pb-ejE">
+                                <rect key="frame" x="206" y="238" width="360" height="21"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="h3O-HU-5Z8" secondAttribute="trailing" constant="-20" id="19X-FU-kXH"/>
+                            <constraint firstItem="mvV-pb-ejE" firstAttribute="top" secondItem="MuJ-jL-Aka" secondAttribute="bottom" constant="19" id="4gV-w3-XUx"/>
+                            <constraint firstItem="M7z-R9-iPJ" firstAttribute="top" secondItem="XRg-Xa-8Je" secondAttribute="bottom" constant="15" id="CwJ-Wj-l9L"/>
+                            <constraint firstItem="apz-z3-x8e" firstAttribute="top" secondItem="Ahr-dM-ecr" secondAttribute="bottom" constant="-12" id="Hzf-Bs-H2Z"/>
+                            <constraint firstItem="Ei3-My-tQi" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="2" id="JNy-OX-xUA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cG0-kh-fL7" secondAttribute="trailing" constant="2" id="Mvb-Z9-wEU"/>
+                            <constraint firstItem="4ky-Ib-DWd" firstAttribute="top" secondItem="L9B-cS-Ye1" secondAttribute="bottom" constant="8" id="NSc-mR-EXS"/>
+                            <constraint firstItem="Ahr-dM-ecr" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="4" id="ONg-zD-ucv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L9B-cS-Ye1" secondAttribute="trailing" constant="2" id="PvR-Dw-Kve"/>
+                            <constraint firstItem="56z-jL-WZn" firstAttribute="top" secondItem="Ei3-My-tQi" secondAttribute="bottom" constant="-12" id="Q1A-QI-gHp"/>
+                            <constraint firstItem="apz-z3-x8e" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="4" id="Sh7-G2-sRA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pq0-HE-RC6" secondAttribute="trailing" constant="-20" id="T6N-Ar-GIj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4ky-Ib-DWd" secondAttribute="trailing" constant="2" id="TAf-WM-foU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="56z-jL-WZn" secondAttribute="trailing" constant="2" id="TeU-Wk-qOC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ahr-dM-ecr" secondAttribute="trailing" id="U48-x9-Dw6"/>
+                            <constraint firstItem="56z-jL-WZn" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="2" id="W0T-WJ-dih"/>
+                            <constraint firstItem="L9B-cS-Ye1" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="2" id="Zgl-UG-hLk"/>
+                            <constraint firstItem="M7z-R9-iPJ" firstAttribute="top" secondItem="XRg-Xa-8Je" secondAttribute="bottom" constant="15" id="acw-5y-Hc7"/>
+                            <constraint firstItem="h3O-HU-5Z8" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="-20" id="bUK-WL-BVN"/>
+                            <constraint firstItem="h3O-HU-5Z8" firstAttribute="top" secondItem="WUW-le-zfg" secondAttribute="bottom" id="cte-oC-c5S"/>
+                            <constraint firstItem="pq0-HE-RC6" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="-20" id="n5n-bg-n7r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="apz-z3-x8e" secondAttribute="trailing" id="o3i-Df-GGz"/>
+                            <constraint firstItem="4ky-Ib-DWd" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="2" id="oS2-SG-XJZ"/>
+                            <constraint firstItem="Ahr-dM-ecr" firstAttribute="top" secondItem="cG0-kh-fL7" secondAttribute="bottom" constant="-12" id="qVY-aS-ciQ"/>
+                            <constraint firstItem="cG0-kh-fL7" firstAttribute="leading" secondItem="w6j-wE-tXY" secondAttribute="leadingMargin" constant="2" id="qhJ-Z4-2eV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ei3-My-tQi" secondAttribute="trailing" constant="2" id="qpK-QI-R5T"/>
+                            <constraint firstItem="dpq-kp-lDI" firstAttribute="top" secondItem="pq0-HE-RC6" secondAttribute="bottom" id="u0R-zL-tIJ"/>
+                            <constraint firstItem="cG0-kh-fL7" firstAttribute="top" secondItem="56z-jL-WZn" secondAttribute="bottom" constant="-12" id="yXc-aH-goU"/>
+                            <constraint firstItem="mvV-pb-ejE" firstAttribute="top" secondItem="MuJ-jL-Aka" secondAttribute="bottom" constant="19" id="zvf-gH-PlP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xce-xP-dpy"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="dayValue" destination="L9B-cS-Ye1" id="8EJ-xz-vqT"/>
+                        <outlet property="eatingValue" destination="Ei3-My-tQi" id="b1I-RO-ZJb"/>
+                        <outlet property="exertionValue" destination="56z-jL-WZn" id="2ET-GU-0ax"/>
+                        <outlet property="movingValue" destination="cG0-kh-fL7" id="y9S-sf-ZsY"/>
+                        <outlet property="nightValue" destination="4ky-Ib-DWd" id="FM6-Na-PJN"/>
+                        <outlet property="restingValue" destination="apz-z3-x8e" id="1oc-bc-cMp"/>
+                        <outlet property="stressValue" destination="Ahr-dM-ecr" id="aOj-83-dAk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOQ-4v-si2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3165" y="580"/>
+        </scene>
+        <!--Summary-->
+        <scene sceneID="nyM-ea-sNZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Summary" id="Q2u-M3-cy7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iDT-uA-4n4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u29-fB-PnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3643" y="780"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Next" width="405" height="104"/>
+        <image name="Previous" width="405" height="104"/>
+        <image name="factor_day" width="87" height="25"/>
+        <image name="factor_eating" width="87" height="25"/>
+        <image name="factor_exertion" width="87" height="25"/>
+        <image name="factor_moving" width="87" height="25"/>
+        <image name="factor_night" width="87" height="25"/>
+        <image name="factor_resting" width="87" height="25"/>
+        <image name="factor_stress" width="87" height="25"/>
+        <image name="progressbar_5" width="2048" height="173"/>
+    </resources>
+</document>

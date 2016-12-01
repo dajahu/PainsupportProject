@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2ag-CC-ZGa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mp9-xd-vri">
+            <objects>
+                <navigationController id="2ag-CC-ZGa" customClass="PSNavigationController" customModule="Pain_support" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U0w-hC-Kyb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.74117647058823533" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xFx-Yu-VXv" kind="relationship" relationship="rootViewController" id="u5A-j2-LPH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMO-I6-JtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1286.4000000000001" y="498.34666666666669"/>
+        </scene>
+        <!--Discomfort-->
+        <scene sceneID="45u-8u-jeo">
+            <objects>
+                <viewController id="xFx-Yu-VXv" customClass="PSStartPageViewController" customModule="Pain_support" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Je-Qf-Au0"/>
+                        <viewControllerLayoutGuide type="bottom" id="QvQ-DB-kF6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5vg-Bn-oMw">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CO-2a-LzZ">
+                                <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="BXe-Jq-8Nt"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem selectedImage="film" id="S5p-Df-UJa"/>
+                                </items>
+                                <color key="barTintColor" red="0.16862745100000001" green="0.73725490199999999" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </tabBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6r-YO-FI9">
+                                <rect key="frame" x="385" y="64" width="2" height="911"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2r-oL-9Qv">
+                                <rect key="frame" x="20" y="82" width="347" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="A2r-oL-9Qv" secondAttribute="height" multiplier="367:66" constant="2.2424242424242493" id="R6V-h6-Hvc"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="add_discomfort">
+                                    <color key="titleColor" red="0.0" green="0.74117647060000003" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ffl-9L-UgY" kind="push" id="nSe-HS-OR2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v6r-YO-FI9" firstAttribute="leading" secondItem="5vg-Bn-oMw" secondAttribute="leadingMargin" constant="365" id="XqM-Ts-Qvp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v6r-YO-FI9" secondAttribute="trailing" constant="361" id="aJW-1h-Xv5"/>
+                            <constraint firstItem="v6r-YO-FI9" firstAttribute="leading" secondItem="A2r-oL-9Qv" secondAttribute="trailing" constant="18" id="alL-ZY-n46"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6CO-2a-LzZ" secondAttribute="trailing" constant="-20" id="dux-9v-yTg"/>
+                            <constraint firstItem="v6r-YO-FI9" firstAttribute="top" secondItem="3Je-Qf-Au0" secondAttribute="bottom" id="gcG-8b-1aH"/>
+                            <constraint firstItem="QvQ-DB-kF6" firstAttribute="top" secondItem="v6r-YO-FI9" secondAttribute="bottom" constant="49" id="hT0-pY-mWy"/>
+                            <constraint firstItem="A2r-oL-9Qv" firstAttribute="leading" secondItem="5vg-Bn-oMw" secondAttribute="leadingMargin" id="hcc-27-j84"/>
+                            <constraint firstItem="A2r-oL-9Qv" firstAttribute="top" secondItem="3Je-Qf-Au0" secondAttribute="bottom" constant="18" id="l0N-Z2-nh1"/>
+                            <constraint firstItem="6CO-2a-LzZ" firstAttribute="leading" secondItem="5vg-Bn-oMw" secondAttribute="leadingMargin" constant="-20" id="p5s-ks-7Aw"/>
+                            <constraint firstItem="QvQ-DB-kF6" firstAttribute="top" secondItem="6CO-2a-LzZ" secondAttribute="bottom" id="yft-Ob-NJo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Discomfort" id="WlA-rR-Ouo"/>
+                    <connections>
+                        <outlet property="lowerMenu" destination="6CO-2a-LzZ" id="JYC-nA-OpR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q94-0p-VDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-373" y="498"/>
+        </scene>
+        <!--Discomfort-->
+        <scene sceneID="SMD-VY-AtA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Discomfort" id="ffl-9L-UgY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="opE-li-myr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7P-xX-xcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419.84000000000003" y="510.29333333333335"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_discomfort" width="475" height="87"/>
+        <image name="film" width="2048" height="173"/>
+    </resources>
+</document>
